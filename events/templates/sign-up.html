@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+{%load static %}
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'ian/css/application.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<header id="main_header" class="cf">
+			<div class="wrapper_wide">
+				<a href="index.html" id="logo">Event Hive</a>
+				<nav>
+					<ul>
+						<li><a href="{% url 'events' %}">Explore</a></li>
+					    <li><a href="{% url 'sign-in' %}">Sign In</a></li>
+					    <li><a href="{% url 'sign-up' %}">Create an Event</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="banner" class="sign_up_banner">
+			<h1>Create an Event</h1>
+		</div>
+     
+		<div id="form">
+			<div class="wrapper_skinny">
+				<form  action="/home/" method="post">
+
+					<div class="field">
+						<label>Name</label><br>
+						<input type="text"/ placeholder="name">
+					</div>
+
+					<div class="field">
+						<label>location</label><br>
+						<input type="text"/ placeholder="email">
+					</div>
+
+					<div class="field">
+						<label>date</label><br>
+						<input type="text"/placeholder="Event name">
+					</div>
+
+					
+					
+					<div class="actions">
+						<input type="submit" value="Create" class="button button_highlight button_block">
+					</div>	
+
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

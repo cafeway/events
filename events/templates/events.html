@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+{%load static%}
+{%for event in allEvent%}
+<p>{{event.name}} {{event.location}} {{event.date}}
+</p>
+{%endfor%}
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="{% static   'ian/css/application.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header id="main_header" class="cf">
+		<div class="wrapper_wide">
+			<a href="index.html" id="logo">Event Hive</a>
+			<nav>
+				<ul>
+					
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="banner" class="events_banner">
+		<h1>Discover your favourite events</h1>
+	</div>
+
+	<div id="events" class="cf">
+		<div class="wrapper">
+			<ul>
+				<a href="event-show.html">
+					<li>
+					<img src="{% static 'ian/images/rocket.jpg' %}" alt="Rocket">
+						<div class="event_overview">
+							<h2>Rockets Events</h2>
+						</div>
+						
+					</li>
+				</a>
+
+				<a href="event_show.html">
+					<li>
+						<img src="{% static 'ian/images/science.jpg' %}" alt="Science">
+						<div class="event_overview">
+							<h2>Science Events</h2>	
+						</div>
+						
+					</li>
+				</a>
+
+				<a href="event.html">
+					<li>
+						<img src="{% static 'ian/images/desk.jpg' %}" alt="DesktoDesk">
+						<div class="event_overview">
+							<h2>DesktoDesk Event</h2>
+						</div>
+						
+					</li>
+				</a>
+
+				<a href="event-show.html">
+					<li>
+						<img src="{% static 'ian/images/snowy.jpg' %}" alt="Snowy">
+						<div class="event_overview">
+							<h2>Snowy Event</h2>	
+						</div>
+						
+					</li>
+				</a>
+
+				<a href="podcast_show.html">
+					<li>
+						<img src="{% static 'ian/images/the-harder.jpg' %}" alt="Rocket">
+						<div class="event_overview">
+							<h2> Work Event</h2>	
+						</div>
+						
+					</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<div class="pagination">
+			<span class="previous_page disabled">Previous</span>
+			<em class="current">1</em>
+			<a href="#">2</a>
+			<a href="#" class="next_page">Next</a>
+		</div>
+		
+</body>
+</html>
